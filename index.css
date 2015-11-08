@@ -133,6 +133,14 @@ body {
   font-weight: 300
 }
 
+.lets-talk.lets-talk-page {
+  padding: 1em
+}
+
+.lets-talk.lets-talk-page strong {
+  font-weight: 500
+}
+
 .lets-talk .textarea {
   position: relative;
   z-index: 3;
