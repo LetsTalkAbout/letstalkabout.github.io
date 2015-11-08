@@ -1,0 +1,267 @@
+html {
+  font-size: 62.5%;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  color: #000;
+  box-sizing: border-box
+}
+
+@media (max-width: 736px) { html { font-size: 50% } }
+@media (max-width: 576px) { html { font-size: 42% } }
+
+* {
+  box-sizing: inherit;
+  line-height: inherit
+}
+
+input[type="text"], textarea {
+  color: inherit;
+  display: block;
+  width: 100%;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none
+}
+
+body {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0
+}
+
+html, body {
+  min-height: 100vh
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+::selection, textarea::selection {
+  background: #a5aeb7;
+  color: #fff
+}
+
+::-webkit-input-placeholder {
+  color: #a5aeb7;
+  font-size: inherit;
+  font-family: inherit
+}
+
+:-moz-placeholder {
+  color: #a5aeb7;
+  font-size: inherit;
+  font-family: inherit
+}
+
+::-moz-placeholder {
+  color: #a5aeb7;
+  font-size: inherit;
+  font-family: inherit
+}
+
+:-ms-input-placeholder {
+  color: #a5aeb7;
+  font-size: inherit;
+  font-family: inherit
+}
+
+.button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: #14a2ff;
+  padding: 1em 1.578em;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: .5em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: .04em
+}
+
+.button[disabled] {
+  cursor: not-allowed
+}
+
+.button:not([disabled]):hover {
+  background: #38b0ff
+}
+
+.button:not([disabled]):hover:active, .button:not([disabled])[active] {
+  background: #0088e2
+}
+
+.button:not([disabled]):focus:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  border-radius: .1em;
+  box-shadow: inset 0 0 0 2px #fff;
+  pointer-events: none
+}
+
+.button:not([disabled]):focus:active:before {
+  opacity: 0
+}
+
+.content {
+  padding: 3em;
+  width: 10em;
+  width: 80em;
+  max-width: 100%
+}
+
+.lets-talk {
+  position: relative;
+  z-index: 1;
+  font-size: 3.6em;
+  margin-bottom: 2em;
+  font-weight: 300
+}
+
+.lets-talk .textarea {
+  position: relative;
+  z-index: 3;
+  padding: 1em;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #cfcdcd
+}
+
+.lets-talk .textarea[focused] {
+  background: #fff
+}
+
+.lets-talk .textarea-content {
+  position: relative
+}
+
+.lets-talk .placeholder {
+  opacity: .3
+}
+
+.lets-talk .placeholder[hide] {
+  opacity: 0
+}
+
+.lets-talk .textarea-dummy-content {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+
+.lets-talk .prompt {
+  font-weight: 500
+}
+
+.lets-talk textarea {
+  background: transparent;
+  padding: 0;
+  min-height: 5.75em;
+  text-indent: 7.5em;
+  resize: none;
+  border: none
+}
+
+.lets-talk textarea, .lets-talk .textarea .placeholder {
+  text-indent: 7.5em
+}
+
+.lets-talk .button {
+  position: absolute;
+  bottom: -.5em;
+  right: -.5em
+}
+
+.share {
+  transform: translateY(-100%);
+  transition: transform ease .4s;
+  background: #fff;
+  border: 1px solid #cfcdcd;
+  margin-top: -1px;
+  position: relative;
+  z-index: 2
+}
+
+.share.focused-once {
+  z-index: 4
+}
+
+.lets-talk[submitted] .share {
+  transform: translateY(0);
+}
+
+.share input[type="text"] {
+  text-align: center;
+  background: transparent;
+  padding: .5em 1em;
+  border: 0
+}
+
+.share input[type="text"]:focus {
+  background: #eee
+}
+
+.share .copy-paste-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+  color: #fff;
+  font-size: .5em;
+  border-radius: 4px;
+  width: 11em;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  padding: .75em 1em;
+  z-index: 9;
+}
+
+.share input[type="text"]:focus + .copy-paste-tooltip {
+  display: block
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1em;
+  text-align: center;
+  font-size: 14px;
+  color: #cfcdcd;
+  margin-top: 22px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none
+}
