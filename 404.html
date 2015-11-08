@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Let’s talk about</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="//fast.eager.io/jywt4mZj7M.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="lets-talk-page">
+
+      </div>
+    </div>
+
+    <a class="info"></a>
+
+    <script>
+      (function(){
+        var page = document.querySelector('.lets-talk-page');
+        var pitch = document.createTextNode(decodeURIComponent(atob(location.pathname.substr(1))));
+        page.appendChild(pitch);
+        document.title = pitch + ' · Let’s talk about';
+      })();
+    </script>
+  </body>
+</html>

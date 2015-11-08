@@ -4,7 +4,7 @@
 
 */
 (function(){
-  if (!window.getComputedStyle || !document.documentElement.querySelector || !document.documentElement.setAttribute) {
+  if (!window.btoa || !window.getComputedStyle || !document.documentElement.querySelector || !document.documentElement.setAttribute) {
     return;
   }
 
@@ -212,8 +212,11 @@
 
   var pitchSubmitted = false;
   var submitPitch = function() {
+    if (!pitch.value) {
+      return;
+    }
     form.setAttribute('submitted', '');
-    url.value = location.protocol + '//' + location.host + '/' + Math.round(Math.random() * 9999999999);
+    url.value = location.protocol + '//' + location.host + '/' + btoa(encodeURIComponent(pitch.value));
     pitchSubmitted = true;
   };
 
