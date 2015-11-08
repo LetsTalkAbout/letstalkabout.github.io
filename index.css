@@ -299,7 +299,6 @@ body {
   display: block
 }
 
-/*
 .info {
   position: fixed;
   z-index: 6;
@@ -327,7 +326,6 @@ body {
 .info:hover:active {
   background: #7f8c98
 }
-*/
 
 .info:before {
   content: "i"
