@@ -16,6 +16,6 @@ header, nav {
 
 @media (min-width: 761px) {
   .chat {
-    padding-top: 0 !important;
+    padding-top: 45px !important;
   }
 }
