@@ -3,7 +3,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background: transparent !important;
   color: #000 !important;
-  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important
 }
 
 html * {
@@ -16,7 +16,11 @@ header, nav {
 
 @media (min-width: 761px) {
   .chat {
-    padding-top: 45px !important;
+    padding-top: 45px !important
+  }
+
+  .footer-wrapper {
+    padding-top: 0 !important
   }
 }
 
