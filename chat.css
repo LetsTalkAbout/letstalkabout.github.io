@@ -19,3 +19,7 @@ header, nav {
     padding-top: 45px !important;
   }
 }
+
+.info {
+  display: none
+}
