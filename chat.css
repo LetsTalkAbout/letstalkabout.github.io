@@ -13,3 +13,9 @@ html * {
 header, nav {
   display: none !important
 }
+
+@media (min-width: 761px) {
+  .chat {
+    padding-top: 0 !important;
+  }
+}

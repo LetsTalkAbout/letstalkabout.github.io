@@ -133,7 +133,11 @@ body {
   font-weight: 300
 }
 
-.lets-talk.lets-talk-page {
+.content.chat-page {
+  width: 120em
+}
+
+.content.chat-page .lets-talk {
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
   margin-bottom: 0;
@@ -147,6 +151,12 @@ body {
 .chat {
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .2)
+}
+
+.chat #tlkio {
+  width: 100%;
+  min-height: 400px;
+  height: calc(100vh - 20em)
 }
 
 .lets-talk .textarea {
