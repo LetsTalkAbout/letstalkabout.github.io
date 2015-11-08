@@ -31,7 +31,7 @@
         page.appendChild(strong);
         page.appendChild(document.createTextNode(' ' + pitch));
         document.title = letsTalkAbout + ' ' + pitch;
-        tlkio.setAttribute('data-channel', ('letstalkabout' + path).substr(0, 30));
+        tlkio.setAttribute('data-channel', ('letstalkabout' + path).replace(/\W/g, '').substr(0, 30));
         tlkio.setAttribute('data-custom-css', location.protocol + '//' + location.host + '/' + 'chat.css');
       })();
     </script>
