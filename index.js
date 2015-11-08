@@ -173,8 +173,6 @@
   pitch.addEventListener('input', function(){
     if (pitch.value) {
       placeholder.setAttribute('hide', '');
-    } else {
-      placeholder.removeAttribute('hide');
     }
   });
 
@@ -188,7 +186,6 @@
 
   pitch.addEventListener('keydown', function(e){
     if (e.keyCode === 13) {
-      console.log('asd');
       submit.setAttribute('active', '');
     }
   });
@@ -213,9 +210,11 @@
 
   var form = document.querySelector('.lets-talk');
 
+  var pitchSubmitted = false;
   var submitPitch = function() {
     form.setAttribute('submitted', '');
     url.value = location.protocol + '//' + location.host + '/' + Math.round(Math.random() * 9999999999);
+    pitchSubmitted = true;
   };
 
   form.addEventListener('submit', function(e){
@@ -240,7 +239,19 @@
   url.addEventListener('click', function(){
     url.focus();
     url.select();
-
-    document.querySelector('.share').classList.add('focused-once');
+  });
+  url.addEventListener('focus', function(){
+    if (pitchSubmitted) {
+      document.querySelector('.share').classList.add('focused-once');
+    }
+  })
+  url.addEventListener('copy', function(){
+    document.querySelector('.share').classList.add('copied');
+  });
+  url.addEventListener('blur', function(){
+    document.querySelector('.share').classList.remove('copied');
+  });
+  url.addEventListener('change', function(){
+    document.querySelector('.share').classList.remove('copied');
   });
 })();

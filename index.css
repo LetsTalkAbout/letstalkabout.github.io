@@ -27,8 +27,6 @@ input[type="text"], textarea {
 }
 
 body {
-  padding-top: 2em;
-  padding-bottom: 2em;
   margin: 0
 }
 
@@ -122,8 +120,7 @@ body {
 }
 
 .content {
-  padding: 3em;
-  width: 10em;
+  padding: 3rem;
   width: 80em;
   max-width: 100%
 }
@@ -239,29 +236,70 @@ body {
   width: 11em;
   white-space: nowrap;
   text-align: center;
-  overflow: hidden;
   padding: .75em 1em;
-  z-index: 9;
+  z-index: 9
+}
+
+.share.copied .copy-paste-tooltip {
+  width: 6em
+}
+
+.share .copy-paste-tooltip:before {
+  content: "Press ⌘+c to copy"
+}
+
+.share.copied .copy-paste-tooltip:before {
+  content: "Copied!"
+}
+
+.share .copy-paste-tooltip:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0;
+  width: 0;
+  border: .7em solid transparent;
+  border-top-color: #000;
+  top: 100%
 }
 
 .share input[type="text"]:focus + .copy-paste-tooltip {
   display: block
 }
 
-footer {
-  position: absolute;
+.info {
+  position: fixed;
+  z-index: 6;
+  cursor: pointer;
+  background: #a5aeb7;
+  color: #fff;
+  font-size: 3.6em;
+  bottom: 3rem;
   left: 0;
   right: 0;
-  bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-size: 14px;
-  color: #cfcdcd;
-  margin-top: 22px;
-  font-weight: 400;
-  line-height: 25px;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  border-radius: 50%;
+  font-family: "Times New Roman", Times, Georgia, serif;
 }
 
-footer a {
-  color: inherit;
-  text-decoration: none
+.info:hover {
+  background-image: #bfc8d2
+}
+
+.info:hover:active {
+  background-image: #7f8c98
+}
+
+.info:before {
+  content: "i"
 }
