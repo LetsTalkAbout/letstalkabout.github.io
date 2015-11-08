@@ -22,9 +22,9 @@
     <script>
       (function(){
         var page = document.querySelector('.lets-talk-page');
-        var pitch = document.createTextNode(decodeURIComponent(atob(location.pathname.substr(1))));
+        var pitch = 'Let’s talk about ' + document.createTextNode(decodeURIComponent(atob(location.pathname.substr(1))));
         page.appendChild(pitch);
-        document.title = pitch + ' · Let’s talk about';
+        document.title = pitch;
       })();
     </script>
   </body>
