@@ -25,11 +25,11 @@
         var path = location.pathname.substr(1);
         var letsTalkAbout = 'Let’s talk about';
         var page = document.querySelector('.lets-talk-page');
-        var pitch = document.createTextNode(decodeURIComponent(atob(path)));
+        var pitch = decodeURIComponent(atob(path));
         var strong = document.createElement('strong');
         strong.appendChild(document.createTextNode(letsTalkAbout));
         page.appendChild(strong);
-        page.appendChild(' ' + pitch);
+        page.appendChild(document.createTextNode(' ' + pitch));
         document.title = letsTalkAbout + ' ' + pitch;
         tlkio.setAttribute('data-channel', 'letstalkabout' + path);
       })();
