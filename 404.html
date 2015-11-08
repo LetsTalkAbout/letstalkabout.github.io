@@ -32,8 +32,14 @@
         page.appendChild(document.createTextNode(' ' + pitch));
         document.title = letsTalkAbout + ' ' + pitch;
         tlkio.setAttribute('data-channel', ('letstalkabout' + path).substr(0, 30));
+        tlkio.setAttribute('data-custom-css', location.protocol + '//' + location.host + '/' + 'chat.css');
       })();
     </script>
     <script async src="http://tlk.io/embed.js" type="text/javascript"></script>
   </body>
 </html>
+
+
+<div id="tlkio" data-theme="theme--minimal" data-custom-css="http://letstalkabout.github.io/chat.css" style="width:100%;height:400px;"></div>
+
+<script async src="http://tlk.io/embed.js" type="text/javascript"></script>
