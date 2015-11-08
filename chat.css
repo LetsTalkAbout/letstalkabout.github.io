@@ -1,7 +1,8 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff !important;
+  background: transparent !important;
+  color: #000 !important;
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
 }
 

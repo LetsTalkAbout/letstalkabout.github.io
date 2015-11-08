@@ -136,11 +136,17 @@ body {
 .lets-talk.lets-talk-page {
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+  margin-bottom: 0;
   padding: 1em
 }
 
 .lets-talk.lets-talk-page strong {
   font-weight: 500
+}
+
+.lets-talk.lets-talk-page .chat {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2)
 }
 
 .lets-talk .textarea {
