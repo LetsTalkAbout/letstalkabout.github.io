@@ -1,3 +1,14 @@
-body {
-  background: red
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif !important;
+}
+
+html * {
+  font-family: inherit !important
+}
+
+header, nav {
+  display: none !important
 }
